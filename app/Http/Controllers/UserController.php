@@ -21,6 +21,6 @@ class UserController extends Controller
     public function update(UserRequest $request, User $user)
     {
         $user->update($request->all());
-        return redirect()->route('user.show', $user->id)->with('success', '个人资料编辑成功');
+        return redirect()->route('users.show', $user->id)->with('success', '个人资料编辑成功');
     }
 }
